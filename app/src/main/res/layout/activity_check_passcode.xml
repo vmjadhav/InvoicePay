@@ -13,7 +13,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:text="Welcome" />
+        android:text="Hello, Vishwajeet Jadhav" />
 
+    <EditText
+        android:id="@+id/loginPINEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:hint="Enter 4 Digit Login PIN"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black" />
 
 </LinearLayout>

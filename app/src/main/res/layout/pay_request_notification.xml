@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/request_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/request_from"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/request_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@+id/request_from"
+        android:layout_toRightOf="@+id/request_from"
+        android:gravity="right"
+        android:text="@string/_26_jan_2019"
+        android:textColor="@color/black" />
+
+
+    <ImageView
+        android:id="@+id/merchant_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/request_from"
+        android:scaleType="centerInside"
+        android:src="@drawable/uber_icon" />
+
+
+    <TextView
+        android:id="@+id/merchant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/request_date"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/merchant_icon"
+        android:text="@string/merchant_name"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/requested_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/request_date"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/merchant_name"
+        android:gravity="right"
+        android:text="500 INR"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/upi_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/merchant_name"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/merchant_icon"
+        android:text="@string/UPI_ID"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/verified_merchant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/requested_amount"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/merchant_name"
+        android:gravity="right"
+        android:text="@string/verified_merchant"
+        android:textColor="@color/black" />
+
+
+    <TextView
+        android:id="@+id/valid_upto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upi_id"
+        android:layout_margin="10dp"
+        android:text="@string/valid_upto"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/validity_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verified_merchant"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_toEndOf="@+id/valid_upto"
+        android:layout_toRightOf="@+id/valid_upto"
+        android:gravity="right"
+        android:text="@string/_26_jan_2019"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/decline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valid_upto"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:text="Decline" />
+
+    <Button
+        android:id="@+id/approve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/validity_date"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Approve" />
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/decline"
+        android:background="@color/black" />
+
+
+    <Button
+        android:id="@+id/view_invoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="View Invoice" />
+
+</RelativeLayout>
