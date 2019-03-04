@@ -59,7 +59,7 @@ public class FCMService extends IntentService {
         Notification notification = mBuilder.build();
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
         //notification.defaults |= Notification.DEFAULT_SOUND;
-        // notification.defaults |= Notification.DEFAULT_VIBRATE;
+        notification.defaults |= Notification.DEFAULT_VIBRATE;
         notificationManager.notify(0, notification);
     }
 }

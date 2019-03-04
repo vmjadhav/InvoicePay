@@ -1,13 +1,16 @@
 <resources>
-    <string name="app_name">InvoicePay</string>
+    <string name="app_name">Invoice Pay</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_make_payment">MakePaymentActivity</string>
+    <string name="title_activity_make_payment">Make Payment</string>
     <string name="request_from">Request from</string>
     <string name="_26_jan_2019">26 Jan 2019</string>
     <string name="merchant_name">Uber</string>
     <string name="UPI_ID">Uber@icici</string>
     <string name="verified_merchant">Verified merchant</string>
     <string name="valid_upto">Valid upto</string>
-    <string name="title_activity_check_passcode">CheckPasscodeActivity</string>
-    <string name="title_activity_view_invoice">ViewInvoiceActivity</string>
+    <string name="title_activity_check_passcode">Confirm PIN</string>
+    <string name="title_activity_view_invoice">View Invoice</string>
+    <string name="title_activity_enter_upipin">Verify UPI PIN</string>
+    <string name="title_activity_payment_success">Payment Success</string>
+    <string name="title_activity_transaction">Transaction Screen</string>
 </resources>

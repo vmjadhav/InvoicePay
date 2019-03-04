@@ -19,7 +19,7 @@ public class ViewInvoiceActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         ViewInvoiceWebViewClientImpl webViewClient = new ViewInvoiceWebViewClientImpl(this);
         webView.setWebViewClient(webViewClient);
-        webView.loadUrl("https://www.google.com");
+        webView.loadUrl("http://yoyobilling.tk/BillingDashboard/invoice.html");
 
     }
 
