@@ -13,4 +13,5 @@
     <string name="title_activity_enter_upipin">Verify UPI PIN</string>
     <string name="title_activity_payment_success">Payment Success</string>
     <string name="title_activity_transaction">Transaction Screen</string>
+    <string name="title_activity_Invoice_options">Invoice Options Screen</string>
 </resources>

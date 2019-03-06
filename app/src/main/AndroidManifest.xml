@@ -11,9 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".InvoiceOptionsActivity"
+            android:label="@string/title_activity_Invoice_options"/>
         <activity
             android:name=".TransactionActivity"
-            android:label="@string/title_activity_transaction"></activity>
+            android:label="@string/title_activity_transaction" />
         <activity
             android:name=".PaymentSuccessActivity"
             android:label="@string/title_activity_payment_success" />
