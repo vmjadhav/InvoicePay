@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".CreateInvoiceActivity"
-            android:label="@string/title_activity_Invoice_options" />
+            android:label="@string/title_Activity_create_invoice" />
         <activity
             android:name=".InvoiceOptionsActivity"
             android:label="@string/title_activity_Invoice_options" />

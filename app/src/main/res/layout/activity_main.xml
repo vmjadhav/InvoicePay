@@ -5,17 +5,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Hello {user name}, "
+        android:textColor="@color/design_default_color_primary"
+        android:gravity="left"
+        android:textSize="32dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/viewTransaction"
         android:layout_marginBottom="0dp"
-        android:gravity="right"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_primary"
             android:text="Balance :"
             android:textSize="32dp" />
 
@@ -23,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$ 50,000"
+            android:textColor="@color/design_default_color_primary"
             android:textSize="32dp" />
 
     </LinearLayout>
