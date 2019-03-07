@@ -20,6 +20,7 @@
     <string name="transaction_number_123412234">Transaction Number : 123412234</string>
     <string name="done">Done</string>
     <string name="todo">TODO</string>
+    <string name="invoice"><u>Invoice</u></string>
     <string name="title_verify_details">Verify details</string>
     <string name="title_select_payment_type">Select payment</string>
     <string name="merchant_address">House no. 456, Wakad \nPune \nMaharashtra</string>
