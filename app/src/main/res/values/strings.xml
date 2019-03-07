@@ -20,4 +20,17 @@
     <string name="transaction_number_123412234">Transaction Number : 123412234</string>
     <string name="done">Done</string>
     <string name="todo">TODO</string>
+    <string name="title_verify_details">Verify details</string>
+    <string name="title_select_payment_type">Select payment</string>
+    <string name="merchant_address">House no. 456, Wakad \nPune \nMaharashtra</string>
+    <string name="title_header_verify_details">Please verify your details</string>
+    <string name="label_Name">Name:</string>
+    <string name="value_name">Nitesh Kumar</string>
+    <string name="label_phone">Phone:</string>
+    <string name="label_emailId">Email Id:</string>
+    <string name="label_upiId">UPI Id:</string>
+    <string name="label_address">Address:</string>
+    <string name="footer_verify_details">Verify that the details are correct before proceeding, else contact us.</string>
+    <string name="call_us">Call Us</string>
+    <string name="Confirm">Confirm</string>
 </resources>

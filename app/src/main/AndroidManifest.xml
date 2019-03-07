@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.poc.invoicepay">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -10,7 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".CreateInvoiceActivity"
             android:label="@string/title_Activity_create_invoice" />
@@ -32,6 +34,14 @@
         <activity
             android:name=".CheckPasscodeActivity"
             android:label="@string/title_activity_check_passcode" />
+
+        <activity
+            android:name=".CustomizeInvoiceVerifyDetails"
+            android:label="@string/title_verify_details" />
+
+        <activity
+            android:name=".CustomizeInvoicePaymentMethod"
+            android:label="@string/title_select_payment_type" />
 
         <service
             android:name=".FCMService"
