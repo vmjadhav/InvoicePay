@@ -15,4 +15,9 @@
     <string name="title_activity_transaction">Transaction Screen</string>
     <string name="title_activity_Invoice_options">Invoice Options Screen</string>
     <string name="title_Activity_create_invoice">Create Invoice</string>
+    <string name="payment_successful">Payment Success</string>
+    <string name="your_payment">Your payment of INR 100 is successfully completed</string>
+    <string name="transaction_number_123412234">Transaction Number : 123412234</string>
+    <string name="done">Done</string>
+    <string name="todo">TODO</string>
 </resources>

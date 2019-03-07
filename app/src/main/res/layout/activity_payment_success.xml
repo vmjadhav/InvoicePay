@@ -6,18 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".PaymentSuccessActivity">
 
+    <ImageView
+        android:id="@+id/successTickIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:contentDescription=""
+        android:src="@drawable/tick_icon" />
+
     <TextView
         android:id="@+id/paySuccess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/successTickIv"
+        android:layout_centerInParent="true"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:layout_centerInParent="true"
-        android:text="Payment Successful" />
-
+        android:text="@string/payment_successful"
+        android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/transactionNumber"
+        android:id="@+id/yourPayment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/paySuccess"
@@ -25,17 +35,34 @@
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:text="Transaction Number : 123412234" />
+        android:text="@string/your_payment"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/transactionNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/yourPayment"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="@string/transaction_number_123412234"
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/doneBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
         android:gravity="center"
-        android:text="Done" />
+        android:text="@string/done"
+         />
 
 
 </RelativeLayout>

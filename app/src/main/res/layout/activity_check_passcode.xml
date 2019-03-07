@@ -23,7 +23,7 @@
         android:layout_margin="20dp"
         android:gravity="center"
         android:hint="Enter 4 Digit Login PIN"
-        android:inputType="numberDecimal"
+        android:inputType="numberPassword"
         android:textColor="@color/black" />
 
 </LinearLayout>

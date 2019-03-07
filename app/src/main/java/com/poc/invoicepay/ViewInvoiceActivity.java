@@ -17,6 +17,11 @@ public class ViewInvoiceActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.invoice_webView);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setMinimumFontSize(18);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false);
         ViewInvoiceWebViewClientImpl webViewClient = new ViewInvoiceWebViewClientImpl(this);
         webView.setWebViewClient(webViewClient);
         webView.loadUrl("http://yoyobilling.tk/BillingDashboard/invoice.html");

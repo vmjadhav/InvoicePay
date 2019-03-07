@@ -75,10 +75,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
-        android:layout_toRightOf="@+id/merchant_name"
-        android:gravity="right"
+        android:background="@drawable/green_border"
+        android:layout_toRightOf="@+id/upi_id"
+        android:gravity="center"
         android:text="@string/verified_merchant"
-        android:textColor="@color/black" />
+        android:textColor="@color/dark_green" />
 
 
     <TextView
@@ -110,7 +111,9 @@
         android:layout_below="@+id/valid_upto"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:text="Decline" />
+        android:background="@color/colorPrimary"
+        android:text="Decline"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/approve"
@@ -120,8 +123,10 @@
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
         android:layout_weight="1"
+        android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="Approve" />
+        android:text="Approve"
+        android:textColor="@color/white" />
 
     <ImageView
         android:id="@+id/divider"
@@ -138,7 +143,10 @@
         android:layout_below="@+id/divider"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="View Invoice" />
+        android:text="View Invoice"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
