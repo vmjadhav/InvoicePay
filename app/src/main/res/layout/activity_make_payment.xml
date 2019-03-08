@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:textSize="18sp"
         android:text="Pay to"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
 
     <TextView
@@ -26,8 +26,8 @@
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:text="Uber"
-        android:textSize="28sp"
         android:textColor="@color/black"
+        android:textSize="28sp"
         android:textStyle="bold" />
 
 
@@ -64,15 +64,37 @@
 
     </RadioGroup>
 
+    <TextView
+        android:id="@+id/tvChooseBankAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="From Which Account You want to Pay"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <Spinner
+        android:id="@+id/spChooseBankAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone" />
+
+
     <Button
         android:id="@+id/payBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pay"
-        android:onClick="onSubmit"
-        android:enabled="false"
-        android:layout_margin="20dp"
         android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:enabled="false"
+        android:onClick="onSubmit"
+        android:text="Pay"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
 
