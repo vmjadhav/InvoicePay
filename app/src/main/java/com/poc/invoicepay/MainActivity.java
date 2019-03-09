@@ -9,6 +9,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button mInvoiceButton = null;
+    private Button mBillPayButton = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +27,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        mBillPayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent checkPassCodeIntent = new Intent(getApplicationContext(), CheckPasscodeActivity.class);
+                startActivity(checkPassCodeIntent);
+            }
+        });
     }
 
     private void initComponents() {
         mInvoiceButton = findViewById(R.id.createInvoiceButton);
+        mBillPayButton = findViewById(R.id.button2);
     }
 
 }
