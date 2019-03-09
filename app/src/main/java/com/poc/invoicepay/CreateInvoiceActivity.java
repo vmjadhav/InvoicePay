@@ -1,12 +1,18 @@
 package com.poc.invoicepay;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.preference.DialogPreference;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +37,7 @@ public class CreateInvoiceActivity extends AppCompatActivity{
     private final Calendar myCalendar = Calendar.getInstance();
     private static final int REQUEST_CODE_CHOOSE_CONTACT = 69;
     private static final int REQUEST_CODE_CREATE_CONTACT = 79;
+    private static final int PERMISSION_REQUEST_CONTACT = 99;
     private RelativeLayout contactLayout;
 
     @Override
@@ -68,7 +75,7 @@ public class CreateInvoiceActivity extends AppCompatActivity{
         btnAddCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addCustomerClicked();
+                askforPermissions();
             }
         });
 
@@ -79,6 +86,48 @@ public class CreateInvoiceActivity extends AppCompatActivity{
                 startActivityForResult(i,REQUEST_CODE_CHOOSE_CONTACT);
             }
         });
+    }
+
+    private void askforPermissions() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+
+                // Should we show an explanation?
+                if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.READ_CONTACTS)) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setTitle("Contacts access needed");
+                    builder.setPositiveButton(android.R.string.ok, null);
+                    builder.setMessage("please confirm Contacts access");
+                    builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                        @TargetApi(Build.VERSION_CODES.M)
+                        @Override
+                        public void onDismiss(DialogInterface dialog) {
+                            requestPermissions(
+                                    new String[]
+                                            {Manifest.permission.READ_CONTACTS}
+                                    , PERMISSION_REQUEST_CONTACT);
+                        }
+                    });
+                    builder.show();
+
+                } else {
+
+                    ActivityCompat.requestPermissions(this,
+                            new String[]{Manifest.permission.READ_CONTACTS},
+                            PERMISSION_REQUEST_CONTACT);
+
+                    // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                    // app-defined int constant. The callback method gets the
+                    // result of the request.
+                }
+            }else{
+                addCustomerClicked();
+            }
+        }
+        else{
+            addCustomerClicked();
+        }
     }
 
     private void initComponents() {
@@ -157,6 +206,23 @@ public class CreateInvoiceActivity extends AppCompatActivity{
     private void hideContactLayout() {
         contactLayout.setVisibility(View.GONE);
         btnChangeCustomer.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_CONTACT: {
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    addCustomerClicked();
+
+                } else {
+                    Toast.makeText(CreateInvoiceActivity.this,"No permission for contacts", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+        }
     }
 
 }
