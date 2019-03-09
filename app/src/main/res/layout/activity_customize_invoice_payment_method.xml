@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CustomizeInvoicePaymentMethod">
+    android:padding="20dp"
+    android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header_payment_method"
+        android:layout_width="match_parent"
+        android:text="Select Payment Method"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_payment_method_selection"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+         android:text="UPI id: nitesh@icici"
+         android:gravity="center_vertical"
+         android:drawablePadding="10dp"
+         android:drawableStart="@drawable/icn_upi"
+         android:textSize="18sp"
+         android:textColor="@color/black"
+         android:drawableLeft="@drawable/icn_upi" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Bank Transfer"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icn_bank_transfer"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/icn_bank_transfer" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_optional_payment_selection"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icn_cash"
+                android:layout_width="wrap_content"
+                android:src="@drawable/icn_cash"
+                android:paddingTop="10dp"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/txt_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/icn_cash"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Cash payment"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/icn_cash" />
+
+            <ImageView
+                android:id="@+id/img_tick_cash"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:paddingTop="20dp"
+                android:visibility="gone"
+                android:src="@drawable/icn_green_tick"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icn_qr"
+                android:layout_width="wrap_content"
+                android:src="@drawable/icn_qr"
+                android:paddingTop="10dp"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/txt_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/icn_qr"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Qr Code"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_toEndOf="@id/icn_qr" />
+
+            <ImageView
+                android:id="@+id/img_tick_qr"
+                android:layout_width="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:paddingTop="20dp"
+                android:visibility="gone"
+                android:src="@drawable/icn_green_tick"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Continue"/>
+
+</RelativeLayout>
