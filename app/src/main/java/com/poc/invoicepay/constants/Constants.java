@@ -7,4 +7,8 @@ public class Constants {
     public static final String API_KEY = "apikey";
 
     public static final String API_KEY_VALUE = "l7xx91c9553affbf44c198c40da6995ac28a";
+
+    public static final int REQUEST_CODE_CHOOSE_CONTACT = 69;
+    public static final int REQUEST_CODE_CREATE_CONTACT = 79;
+    public static final int PERMISSION_REQUEST_CONTACT = 99;
 }

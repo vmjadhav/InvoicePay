@@ -24,20 +24,22 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.poc.invoicepay.Singleton.InvoiceDetails;
+import com.poc.invoicepay.constants.Constants;
 import com.poc.invoicepay.model.Contact_Model;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class CreateInvoiceActivity extends AppCompatActivity{
 
-    private EditText edittext;
-    private Button btnAddCustomer, btnAddLineItems, btnChangeCustomer;
+    private EditText invoiceCreateDate,invoiceExpiryDate,invoiceReference,invoiceNo;
+    private Button btnAddCustomer, btnSaveAndContinue, btnChangeCustomer;
     private final Calendar myCalendar = Calendar.getInstance();
-    private static final int REQUEST_CODE_CHOOSE_CONTACT = 69;
-    private static final int REQUEST_CODE_CREATE_CONTACT = 79;
-    private static final int PERMISSION_REQUEST_CONTACT = 99;
+    private Contact_Model contact=new Contact_Model();
     private RelativeLayout contactLayout;
 
     @Override
@@ -46,7 +48,15 @@ public class CreateInvoiceActivity extends AppCompatActivity{
         setContentView(R.layout.activity_create_invoice);
 
         initComponents();
+        setInvoiceCreateDate();
         setListeners();
+    }
+
+    private void setInvoiceCreateDate() {
+        String dateFormat = new String("dd - MMM - yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.US);
+        invoiceCreateDate.setText("Today, " + sdf.format(new Date()));
+
     }
 
     private void setListeners() {
@@ -62,7 +72,7 @@ public class CreateInvoiceActivity extends AppCompatActivity{
 
         };
 
-        edittext.setOnClickListener(new View.OnClickListener() {
+        invoiceExpiryDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 hideKeyboard();
@@ -83,9 +93,19 @@ public class CreateInvoiceActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(CreateInvoiceActivity.this,ContactsActivity.class);
-                startActivityForResult(i,REQUEST_CODE_CHOOSE_CONTACT);
+                startActivityForResult(i, Constants.REQUEST_CODE_CHOOSE_CONTACT);
             }
         });
+
+        btnSaveAndContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveInvoiceDetails();
+                Intent i = new Intent(CreateInvoiceActivity.this,AddItemsActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 
     private void askforPermissions() {
@@ -106,7 +126,7 @@ public class CreateInvoiceActivity extends AppCompatActivity{
                             requestPermissions(
                                     new String[]
                                             {Manifest.permission.READ_CONTACTS}
-                                    , PERMISSION_REQUEST_CONTACT);
+                                    , Constants.PERMISSION_REQUEST_CONTACT);
                         }
                     });
                     builder.show();
@@ -115,7 +135,7 @@ public class CreateInvoiceActivity extends AppCompatActivity{
 
                     ActivityCompat.requestPermissions(this,
                             new String[]{Manifest.permission.READ_CONTACTS},
-                            PERMISSION_REQUEST_CONTACT);
+                            Constants.PERMISSION_REQUEST_CONTACT);
 
                     // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
                     // app-defined int constant. The callback method gets the
@@ -131,9 +151,12 @@ public class CreateInvoiceActivity extends AppCompatActivity{
     }
 
     private void initComponents() {
-        edittext= findViewById(R.id.expiryDate);
+        invoiceReference = findViewById(R.id.invoiceReference_editbox);
+        invoiceNo = findViewById(R.id.invoiceNo_editbox);
+        invoiceCreateDate = findViewById(R.id.invoiceCreateDate);
+        invoiceExpiryDate= findViewById(R.id.invoiceExpiryDate);
         btnAddCustomer = findViewById(R.id.addCustomer);
-        btnAddLineItems = findViewById(R.id.addLineItems);
+        btnSaveAndContinue = findViewById(R.id.btnSaveAndContinue);
         btnChangeCustomer = findViewById(R.id.changeCustomer);
         contactLayout = findViewById(R.id.contact_layout);
     }
@@ -141,13 +164,15 @@ public class CreateInvoiceActivity extends AppCompatActivity{
     private void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
         View view = CreateInvoiceActivity.this.getCurrentFocus();
-        imm.hideSoftInputFromWindow(view.getWindowToken(),0);
+        if(view != null){
+            imm.hideSoftInputFromWindow(view.getWindowToken(),0);
+        }
     }
 
     private void updateEditText() {
-        String myFormat = "dd - MM - yyyy";
+        String myFormat = "dd - MMM - yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-        edittext.setText(sdf.format(myCalendar.getTime()));
+        invoiceExpiryDate.setText(sdf.format(myCalendar.getTime()));
     }
 
     private void addCustomerClicked() {
@@ -159,13 +184,13 @@ public class CreateInvoiceActivity extends AppCompatActivity{
         builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 Intent i = new Intent(CreateInvoiceActivity.this,ContactsActivity.class);
-                startActivityForResult(i,REQUEST_CODE_CHOOSE_CONTACT);
+                startActivityForResult(i,Constants.REQUEST_CODE_CHOOSE_CONTACT);
             }
         });
         builder.setNegativeButton("Create Contact", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 Intent i = new Intent(CreateInvoiceActivity.this,ContactsActivity.class);
-                startActivityForResult(i,REQUEST_CODE_CREATE_CONTACT);
+                startActivityForResult(i,Constants.REQUEST_CODE_CREATE_CONTACT);
             }
         });
         builder.show();
@@ -174,9 +199,9 @@ public class CreateInvoiceActivity extends AppCompatActivity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == REQUEST_CODE_CHOOSE_CONTACT && resultCode == RESULT_OK){
+        if(requestCode == Constants.REQUEST_CODE_CHOOSE_CONTACT && resultCode == RESULT_OK){
             Bundle bundle = data.getExtras();
-            Contact_Model contact = (Contact_Model) bundle.getSerializable("contact");
+            contact = (Contact_Model) bundle.getSerializable("contact");
             if(contact != null){
                 showContactLayout(contact);
             }else{
@@ -184,7 +209,7 @@ public class CreateInvoiceActivity extends AppCompatActivity{
             }
 
 
-        }else if(requestCode == REQUEST_CODE_CREATE_CONTACT && resultCode == RESULT_OK){
+        }else if(requestCode == Constants.REQUEST_CODE_CREATE_CONTACT && resultCode == RESULT_OK){
             Toast.makeText(CreateInvoiceActivity.this,"Succes",Toast.LENGTH_SHORT).show();
         }
     }
@@ -201,6 +226,7 @@ public class CreateInvoiceActivity extends AppCompatActivity{
         contact_email.setText(contact.getContactEmail());
         contactLayout.setVisibility(View.VISIBLE);
         btnChangeCustomer.setVisibility(View.VISIBLE);
+        btnAddCustomer.setVisibility(View.GONE);
     }
 
     private void hideContactLayout() {
@@ -212,7 +238,7 @@ public class CreateInvoiceActivity extends AppCompatActivity{
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
         switch (requestCode) {
-            case PERMISSION_REQUEST_CONTACT: {
+            case Constants.PERMISSION_REQUEST_CONTACT: {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     addCustomerClicked();
@@ -223,6 +249,15 @@ public class CreateInvoiceActivity extends AppCompatActivity{
                 return;
             }
         }
+    }
+
+    private void saveInvoiceDetails() {
+        InvoiceDetails invoiceDetails = InvoiceDetails.getInstance();
+        invoiceDetails.setInvoiceReference(invoiceReference.getText().toString());
+        invoiceDetails.setInvoiceNumber(invoiceNo.getText().toString());
+        invoiceDetails.setInvoiceCreateDate(invoiceCreateDate.getText().subSequence(("Todays, ").length(),invoiceCreateDate.length()).toString());
+        invoiceDetails.setInvoiceExpiryDate(invoiceExpiryDate.getText().toString());
+        invoiceDetails.setContact(contact);
     }
 
 }
