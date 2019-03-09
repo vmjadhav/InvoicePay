@@ -22,10 +22,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_weight="1"
         >
 
-        <Button android:id="@+id/manageInvoice"
+        <Button android:id="@+id/customizeInvoice"
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:text="Customise Invoice"
@@ -39,7 +38,7 @@
             />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/manageInvoice"
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_weight="1"

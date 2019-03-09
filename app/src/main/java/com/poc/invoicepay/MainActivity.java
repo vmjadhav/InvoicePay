@@ -8,13 +8,17 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button mInvoiceButton = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initComponents();
+        setListeners();
+    }
 
-        Button mInvoiceButton = findViewById(R.id.createInvoiceButton);
-
+    private void setListeners() {
         mInvoiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
 
+    private void initComponents() {
+        mInvoiceButton = findViewById(R.id.createInvoiceButton);
     }
 
 }

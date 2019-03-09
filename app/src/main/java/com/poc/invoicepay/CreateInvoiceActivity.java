@@ -26,24 +26,23 @@ import java.util.Locale;
 
 public class CreateInvoiceActivity extends AppCompatActivity{
 
-    EditText edittext;
-    Button btnAddCustomer,btnAddLineItems,btnChangeCustomer;
-    final Calendar myCalendar = Calendar.getInstance();
-    int REQUEST_CODE_CHOOSE_CONTACT = 69;
-    int REQUEST_CODE_CREATE_CONTACT = 79;
-    RelativeLayout contactLayout;
+    private EditText edittext;
+    private Button btnAddCustomer, btnAddLineItems, btnChangeCustomer;
+    private final Calendar myCalendar = Calendar.getInstance();
+    private static final int REQUEST_CODE_CHOOSE_CONTACT = 69;
+    private static final int REQUEST_CODE_CREATE_CONTACT = 79;
+    private RelativeLayout contactLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_invoice);
 
-        edittext= findViewById(R.id.expiryDate);
-        btnAddCustomer = findViewById(R.id.addCustomer);
-        btnAddLineItems = findViewById(R.id.addLineItems);
-        btnChangeCustomer = findViewById(R.id.changeCustomer);
-        contactLayout = findViewById(R.id.contact_layout);
+        initComponents();
+        setListeners();
+    }
 
+    private void setListeners() {
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
@@ -80,6 +79,14 @@ public class CreateInvoiceActivity extends AppCompatActivity{
                 startActivityForResult(i,REQUEST_CODE_CHOOSE_CONTACT);
             }
         });
+    }
+
+    private void initComponents() {
+        edittext= findViewById(R.id.expiryDate);
+        btnAddCustomer = findViewById(R.id.addCustomer);
+        btnAddLineItems = findViewById(R.id.addLineItems);
+        btnChangeCustomer = findViewById(R.id.changeCustomer);
+        contactLayout = findViewById(R.id.contact_layout);
     }
 
     private void hideKeyboard() {

@@ -8,13 +8,19 @@ import android.widget.Button;
 
 public class InvoiceOptionsActivity extends AppCompatActivity {
 
+    private Button mCustomizeButton = null;
+    private Button mCreateInvoiceButton = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invoice_options);
 
-        Button mCreateInvoiceButton = findViewById(R.id.createInvoice);
+        initComponents();
+        setListeners();
+    }
 
+    private void setListeners() {
         mCreateInvoiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,5 +28,20 @@ public class InvoiceOptionsActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        mCustomizeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iCustomize = new Intent(InvoiceOptionsActivity.this,
+                        CustomizeInvoiceVerifyDetails.class);
+
+                startActivity(iCustomize);
+            }
+        });
+    }
+
+    private void initComponents() {
+        mCreateInvoiceButton = findViewById(R.id.createInvoice);
+        mCustomizeButton = findViewById(R.id.customizeInvoice);
     }
 }
