@@ -1,8 +1,10 @@
 package com.poc.invoicepay;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +15,8 @@ public class CustomizeInvoicePaymentMethod extends AppCompatActivity {
 
     private ImageView imgCashTick = null;
     private ImageView imgQrTick = null;
+
+    private Button btnContinue = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,15 @@ public class CustomizeInvoicePaymentMethod extends AppCompatActivity {
                 }
             }
         });
+
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iAddress = new Intent(CustomizeInvoicePaymentMethod.this,
+                        CustomizeInvoiceBillingAddress.class);
+                startActivity(iAddress);
+            }
+        });
     }
 
     private void initComponents() {
@@ -51,5 +64,6 @@ public class CustomizeInvoicePaymentMethod extends AppCompatActivity {
         txtQr = findViewById(R.id.txt_qr);
         imgCashTick = findViewById(R.id.img_tick_cash);
         imgQrTick = findViewById(R.id.img_tick_qr);
+        btnContinue = findViewById(R.id.btn_continue);
     }
 }

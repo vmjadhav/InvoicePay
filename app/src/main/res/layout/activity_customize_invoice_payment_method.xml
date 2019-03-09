@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey"
     android:layout_width="match_parent"
-    android:padding="20dp"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:orientation="vertical">
 
     <TextView
@@ -19,13 +19,13 @@
         android:textSize="24sp"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/title_payment_method_selection"
-        android:textColor="@color/black"
-        android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/title_payment_method_selection"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
 
      <TextView
@@ -146,9 +146,12 @@
 
 
     <Button
+        android:id="@+id/btn_continue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
         android:text="Continue"/>
 
 </RelativeLayout>

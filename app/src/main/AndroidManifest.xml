@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".AddItemsActivity"></activity>
+        <activity android:name=".CustomizeInvoiceCongratulations"></activity>
+        <activity android:name=".CustomizeInvoiceBillingAddress" />
+        <activity android:name=".AddItemsActivity" />
         <activity
             android:name=".ContactsActivity"
             android:label="@string/title_activity_contact" />

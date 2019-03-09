@@ -37,4 +37,8 @@
     <string name="Confirm">Confirm</string>
     <string name="title_payment_method_selection">UPI Id and Bank transfer are manadatory, \nyou can select if you want to add other available payment methods</string>
     <string name="title_optional_payment_selection">Tap the payment methods you want to add:</string>
+    <string name="title_payment_billing_address_selection">Select billing Address</string>
+    <string name="merchant_address_second">House no. 433, Kaspate Wasti \nPune \nMaharashtra</string>
+    <string name="merchant_address_third">House no. 45, Model Colony \nJalandhar \nPunjab</string>
+    <string name="invoice_customization_success">Congrats your invoice has been created successfully, now go ahead and create an invoice</string>
 </resources>
