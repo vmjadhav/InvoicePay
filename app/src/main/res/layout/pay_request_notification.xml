@@ -28,9 +28,10 @@
         android:id="@+id/merchant_icon"
         android:layout_width="100dp"
         android:layout_height="100dp"
+       android:layout_marginLeft="10dp"
         android:layout_below="@+id/request_from"
-        android:scaleType="centerInside"
-        android:src="@drawable/uber_icon" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/ola_icon" />
 
 
     <TextView
@@ -67,6 +68,16 @@
         android:text="@string/UPI_ID"
         android:textColor="@color/black" />
 
+    <ImageView
+        android:id="@+id/verifiedMerchantIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@id/upi_id"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/requested_amount"
+        android:src="@drawable/verified_icon" />
+
+
     <TextView
         android:id="@+id/verified_merchant"
         android:layout_width="wrap_content"
@@ -75,9 +86,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
+        android:paddingLeft="10dp"
         android:background="@drawable/green_border"
-        android:layout_toRightOf="@+id/upi_id"
-        android:gravity="center"
+        android:layout_toRightOf="@+id/verifiedMerchantIcon"
+        android:gravity="left"
         android:text="@string/verified_merchant"
         android:textColor="@color/dark_green" />
 

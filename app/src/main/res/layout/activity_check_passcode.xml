@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:text="Hello, Vishwajeet Jadhav" />
+        android:text="Hello, Nitesh Kumar" />
 
     <EditText
         android:id="@+id/loginPINEdt"

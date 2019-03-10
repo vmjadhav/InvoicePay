@@ -4,8 +4,8 @@
     <string name="title_activity_make_payment">Make Payment</string>
     <string name="request_from">Request from</string>
     <string name="_26_jan_2019">26 Jan 2019</string>
-    <string name="merchant_name">Uber</string>
-    <string name="UPI_ID">Uber@icici</string>
+    <string name="merchant_name">Ola</string>
+    <string name="UPI_ID">Ola@icici</string>
     <string name="verified_merchant">Verified merchant</string>
     <string name="valid_upto">Valid upto</string>
     <string name="title_activity_check_passcode">Confirm PIN</string>
