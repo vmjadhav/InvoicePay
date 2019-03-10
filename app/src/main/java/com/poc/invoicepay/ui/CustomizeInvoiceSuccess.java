@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import com.poc.invoicepay.R;
 
-public class CustomizeInvoiceCongratulations extends AppCompatActivity {
+public class CustomizeInvoiceSuccess extends AppCompatActivity {
 
     private Button btnCreateInvoice = null;
 
@@ -24,7 +24,8 @@ public class CustomizeInvoiceCongratulations extends AppCompatActivity {
         btnCreateInvoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent iCreateInvoice = new Intent(CustomizeInvoiceCongratulations.this,
+                finish();
+                Intent iCreateInvoice = new Intent(CustomizeInvoiceSuccess.this,
                         CreateInvoiceActivity.class);
                 startActivity(iCreateInvoice);
             }

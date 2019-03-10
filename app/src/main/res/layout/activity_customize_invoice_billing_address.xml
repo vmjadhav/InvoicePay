@@ -20,22 +20,26 @@
 
 
      <RadioGroup
+         android:id="@+id/rg_address"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_marginTop="20dp">
 
          <RadioButton
+             android:id="@+id/rbAddressFirst"
              android:layout_width="match_parent"
              android:text="@string/merchant_address"
              android:layout_height="wrap_content" />
 
          <RadioButton
+             android:id="@+id/rbAddressSecond"
              android:layout_width="match_parent"
              android:layout_marginTop="20dp"
              android:text="@string/merchant_address_second"
              android:layout_height="wrap_content" />
 
          <RadioButton
+             android:id="@+id/rbAddressThird"
              android:layout_width="match_parent"
              android:layout_marginTop="20dp"
              android:text="@string/merchant_address_third"
@@ -50,7 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/button"
         android:textColor="@color/white"
+        android:enabled="false"
         android:text="Done"/>
 </RelativeLayout>

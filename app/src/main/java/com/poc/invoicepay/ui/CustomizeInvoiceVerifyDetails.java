@@ -24,6 +24,7 @@ public class CustomizeInvoiceVerifyDetails extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 Intent iPayment = new Intent(CustomizeInvoiceVerifyDetails.this,
                         CustomizeInvoicePaymentMethod.class);
                 startActivity(iPayment);

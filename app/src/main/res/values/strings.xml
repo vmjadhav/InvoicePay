@@ -35,10 +35,13 @@
     <string name="footer_verify_details">Verify that the details are correct before proceeding, else contact us.</string>
     <string name="call_us">Call Us</string>
     <string name="Confirm">Confirm</string>
-    <string name="title_payment_method_selection">UPI Id and Bank transfer are manadatory, \nyou can select if you want to add other available payment methods</string>
+    <string name="title_payment_method_selection">UPI Id and Bank transfer are mandatory, \nyou can select if you want to add other available payment methods</string>
     <string name="title_optional_payment_selection">Tap the payment methods you want to add:</string>
     <string name="title_payment_billing_address_selection">Select billing Address</string>
     <string name="merchant_address_second">House no. 433, Kaspate Wasti \nPune \nMaharashtra</string>
     <string name="merchant_address_third">House no. 45, Model Colony \nJalandhar \nPunjab</string>
-    <string name="invoice_customization_success">Congrats your invoice has been created successfully, now go ahead and create an invoice</string>
+    <string name="invoice_customization_success">Congrats your invoice has been customized successfully, now go ahead and create an invoice</string>
+    <string name="title_default_payment_methods">Default payment methods:</string>
+    <string name="title_payment_selection_added">Additional payment methods:</string>
+    <string name="title_invoice_start">Here you can customize, create and manage your invoice with ease.</string>
 </resources>

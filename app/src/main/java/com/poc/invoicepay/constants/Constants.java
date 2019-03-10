@@ -11,4 +11,8 @@ public class Constants {
     public static final int REQUEST_CODE_CHOOSE_CONTACT = 69;
     public static final int REQUEST_CODE_CREATE_CONTACT = 79;
     public static final int PERMISSION_REQUEST_CONTACT = 99;
+
+    public static final int FIRST = 1;
+    public static final int SECOND = 2;
+    public static final int THIRD = 3;
 }

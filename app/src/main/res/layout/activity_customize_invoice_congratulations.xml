@@ -7,11 +7,11 @@
     <ImageView
         android:id="@+id/img_invoice"
         android:layout_width="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/icn_invoice_image"
-        android:layout_height="wrap_content"/>
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/invoice_dummy"
+        android:layout_height="300dp"/>
     
     <TextView
         android:layout_width="match_parent"
@@ -19,8 +19,9 @@
         android:layout_below="@id/img_invoice"
         android:textSize="18sp"
         android:textColor="@color/black"
-        android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp"
         android:layout_height="wrap_content"/>
 
     <Button
@@ -28,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/button"
         android:textColor="@color/white"
         android:text="Create Invoice"/>
 

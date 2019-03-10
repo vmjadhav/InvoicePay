@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="6dp"
-    android:weightSum="3"
-    tools:context=".ui.InvoiceOptionsActivity">
+    android:layout_margin="16dp">
 
     <ImageView
-        android:id="@+id/mImageView"
+        android:id="@+id/img_invoice"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_weight="2"
-        />
+        android:src="@drawable/invoice_success"
+        android:layout_height="400dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/title_invoice_start"
+        android:layout_below="@id/img_invoice"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:id="@+id/middleButtons"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
 
         <Button android:id="@+id/customizeInvoice"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:text="Customise Invoice"
-            android:layout_weight="1"
-            />
-        <Button android:id="@+id/createInvoice"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:text="Create   Invoice"
-            android:layout_weight="1"
-            />
+            android:layout_width="match_parent"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="Customise Invoice" />
 
-        <Button
-            android:id="@+id/manageInvoice"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:text="Manage Invoice"
-            />
+        <Button android:id="@+id/createInvoice"
+            android:layout_width="match_parent"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="Create Invoice" />
+
+        <Button android:id="@+id/manageInvoice"
+            android:layout_width="match_parent"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="Manage Invoice" />
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
