@@ -1,4 +1,4 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.poc.invoicepay.R;
 
 import java.util.ArrayList;
 import java.util.List;

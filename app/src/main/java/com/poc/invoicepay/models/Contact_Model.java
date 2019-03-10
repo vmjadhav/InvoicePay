@@ -1,4 +1,4 @@
-package com.poc.invoicepay.model;
+package com.poc.invoicepay.models;
 
 import java.io.Serializable;
 

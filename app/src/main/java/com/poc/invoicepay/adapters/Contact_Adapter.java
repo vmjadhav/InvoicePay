@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.poc.invoicepay.R;
-import com.poc.invoicepay.model.Contact_Model;
+import com.poc.invoicepay.models.Contact_Model;
 
 import java.util.ArrayList;
 

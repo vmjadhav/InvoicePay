@@ -1,4 +1,4 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.poc.invoicepay.R;
 import com.poc.invoicepay.constants.Constants;
 import com.poc.invoicepay.gateway.ResponseData;
 import com.poc.invoicepay.gateway.Server;

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_margin="6dp"
     android:weightSum="3"
-    tools:context=".InvoiceOptionsActivity">
+    tools:context=".ui.InvoiceOptionsActivity">
 
     <ImageView
         android:id="@+id/mImageView"

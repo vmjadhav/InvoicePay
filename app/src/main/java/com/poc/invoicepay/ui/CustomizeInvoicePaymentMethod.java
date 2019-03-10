@@ -1,4 +1,4 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.poc.invoicepay.R;
 
 public class CustomizeInvoicePaymentMethod extends AppCompatActivity {
 

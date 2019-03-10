@@ -15,49 +15,49 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".CustomizeInvoiceCongratulations"></activity>
-        <activity android:name=".CustomizeInvoiceBillingAddress" />
-        <activity android:name=".AddItemsActivity" />
+        <activity android:name=".ui.CustomizeInvoiceCongratulations"></activity>
+        <activity android:name=".ui.CustomizeInvoiceBillingAddress" />
+        <activity android:name=".ui.AddItemsActivity" />
         <activity
-            android:name=".ContactsActivity"
+            android:name=".ui.ContactsActivity"
             android:label="@string/title_activity_contact" />
         <activity
-            android:name=".CreateInvoiceActivity"
+            android:name=".ui.CreateInvoiceActivity"
             android:label="@string/title_activity_create_invoice" />
         <activity
-            android:name=".InvoiceOptionsActivity"
+            android:name=".ui.InvoiceOptionsActivity"
             android:label="@string/title_activity_Invoice_options" />
         <activity
-            android:name=".TransactionActivity"
+            android:name=".ui.TransactionActivity"
             android:label="@string/title_activity_transaction" />
         <activity
-            android:name=".PaymentSuccessActivity"
+            android:name=".ui.PaymentSuccessActivity"
             android:label="@string/title_activity_payment_success" />
         <activity
-            android:name=".EnterUPIPinActivity"
+            android:name=".ui.EnterUPIPinActivity"
             android:label="@string/title_activity_enter_upipin" />
         <activity
-            android:name=".ViewInvoiceActivity"
+            android:name=".ui.ViewInvoiceActivity"
             android:label="@string/title_activity_view_invoice" />
         <activity
-            android:name=".CheckPasscodeActivity"
+            android:name=".ui.CheckPasscodeActivity"
             android:label="@string/title_activity_check_passcode" />
         <activity
-            android:name=".CustomizeInvoiceVerifyDetails"
+            android:name=".ui.CustomizeInvoiceVerifyDetails"
             android:label="@string/title_verify_details" />
         <activity
-            android:name=".CustomizeInvoicePaymentMethod"
+            android:name=".ui.CustomizeInvoicePaymentMethod"
             android:label="@string/title_select_payment_type" />
 
         <service
-            android:name=".FCMService"
+            android:name=".service.FCMService"
             android:exported="false" />
 
         <activity
-            android:name=".MakePaymentActivity"
+            android:name=".ui.MakePaymentActivity"
             android:label="@string/title_activity_make_payment" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -66,7 +66,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".PayRequestBroadcastReceiver">
+        <receiver android:name=".receiver.PayRequestBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.payment.request.CUSTOM_INTENT" />
             </intent-filter>

@@ -1,11 +1,11 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
+import com.poc.invoicepay.R;
 import com.poc.invoicepay.Singleton.InvoiceDetails;
-import com.poc.invoicepay.model.LineItems;
+import com.poc.invoicepay.models.LineItems;
 
 import java.util.ArrayList;
 

@@ -1,26 +1,19 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.content.ContentResolver;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
+import com.poc.invoicepay.R;
 import com.poc.invoicepay.adapters.Contact_Adapter;
-import com.poc.invoicepay.model.Contact_Model;
+import com.poc.invoicepay.models.Contact_Model;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ContactsActivity extends AppCompatActivity {

@@ -1,7 +1,7 @@
 package com.poc.invoicepay.Singleton;
 
-import com.poc.invoicepay.model.Contact_Model;
-import com.poc.invoicepay.model.LineItems;
+import com.poc.invoicepay.models.Contact_Model;
+import com.poc.invoicepay.models.LineItems;
 
 import java.util.ArrayList;
 

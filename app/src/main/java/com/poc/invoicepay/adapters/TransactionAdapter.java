@@ -1,15 +1,16 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
-import android.text.Spanned;
-import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.poc.invoicepay.R;
+import com.poc.invoicepay.ui.ViewInvoiceActivity;
+import com.poc.invoicepay.models.Transaction;
 
 import java.util.List;
 

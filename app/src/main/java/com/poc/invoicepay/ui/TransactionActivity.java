@@ -1,14 +1,14 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+
+import com.poc.invoicepay.R;
+import com.poc.invoicepay.adapters.TransactionAdapter;
+import com.poc.invoicepay.models.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -9,7 +9,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.preference.DialogPreference;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -24,11 +23,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.poc.invoicepay.R;
 import com.poc.invoicepay.Singleton.InvoiceDetails;
 import com.poc.invoicepay.constants.Constants;
-import com.poc.invoicepay.model.Contact_Model;
+import com.poc.invoicepay.models.Contact_Model;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;

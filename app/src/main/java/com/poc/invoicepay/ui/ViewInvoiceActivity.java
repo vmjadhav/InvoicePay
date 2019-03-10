@@ -1,10 +1,12 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+import com.poc.invoicepay.R;
 
 public class ViewInvoiceActivity extends AppCompatActivity {
 

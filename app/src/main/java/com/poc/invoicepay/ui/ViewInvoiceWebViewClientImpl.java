@@ -1,4 +1,4 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.ui;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

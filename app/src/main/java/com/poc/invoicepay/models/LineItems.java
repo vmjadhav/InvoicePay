@@ -1,4 +1,4 @@
-package com.poc.invoicepay.model;
+package com.poc.invoicepay.models;
 
 public class LineItems {
     private String itemName,ItemDetails;

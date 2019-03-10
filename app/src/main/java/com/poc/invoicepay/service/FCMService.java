@@ -1,4 +1,4 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.service;
 
 import android.annotation.TargetApi;
 import android.app.IntentService;
@@ -10,6 +10,11 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
 import android.widget.RemoteViews;
+
+import com.poc.invoicepay.ui.CheckPasscodeActivity;
+import com.poc.invoicepay.ui.MakePaymentActivity;
+import com.poc.invoicepay.R;
+import com.poc.invoicepay.ui.ViewInvoiceActivity;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in

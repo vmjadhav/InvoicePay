@@ -1,4 +1,4 @@
-package com.poc.invoicepay;
+package com.poc.invoicepay.models;
 
 public class Transaction {
     private String date;
