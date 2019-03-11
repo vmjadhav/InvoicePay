@@ -63,7 +63,7 @@ public class LineItemActivity extends AppCompatActivity {
                 }else{
                     fromOncreate = false;
                 }
-                lineItems.setItemQty(position+1);
+                lineItems.setItemQty(position);
                 int qty = Integer.parseInt((String)spinner.getItemAtPosition(position));
                 double rate = lineItems.getItemRate();
                 double total = rate * qty;

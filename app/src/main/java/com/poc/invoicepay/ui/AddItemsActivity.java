@@ -18,7 +18,7 @@ import com.poc.invoicepay.models.LineItems;
 import java.util.ArrayList;
 
 public class AddItemsActivity extends AppCompatActivity {
-
+    InvoiceDetails invoiceDetails = InvoiceDetails.getInstance();
     Button btnAddLineItem,btnReviewInvoice;
     ArrayList<LineItems> lineItemsList;
     ListView lineItemListView;
@@ -61,6 +61,19 @@ public class AddItemsActivity extends AppCompatActivity {
                 startActivityForResult(i, Constants.REQUEST_CODE_ADD_LINE_ITEM);
             }
         });
+
+        btnReviewInvoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveDetails();
+                Intent i = new Intent(AddItemsActivity.this,InvoiceReviewActivity.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    private void saveDetails() {
+        invoiceDetails.setLineItemsArrayList(lineItemsList);
     }
 
     @Override

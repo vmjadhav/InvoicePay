@@ -15,7 +15,10 @@
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:text="Tap to Add item"
-        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:textColor="@color/white" />
 
     <ListView
