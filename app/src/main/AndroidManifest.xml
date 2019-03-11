@@ -15,10 +15,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.CustomizedInvoiceDetails"></activity>
+        <activity android:name=".ui.EnterUpiActivity"></activity>
+        <activity
+            android:name=".ui.LineItemActivity"
+            android:label="@string/title_activity_line_items" />
+        <activity android:name=".ui.CustomizedInvoiceDetails" />
         <activity android:name=".ui.CustomizeInvoiceSuccess" />
         <activity android:name=".ui.CustomizeInvoiceBillingAddress" />
-        <activity android:name=".ui.AddItemsActivity" />
+        <activity
+            android:name=".ui.AddItemsActivity"
+            android:label="@string/title_activity_add_line_items" />
         <activity
             android:name=".ui.ContactsActivity"
             android:label="@string/title_activity_contact" />

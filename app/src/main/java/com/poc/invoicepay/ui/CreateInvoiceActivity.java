@@ -91,8 +91,8 @@ public class CreateInvoiceActivity extends AppCompatActivity{
         btnChangeCustomer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CreateInvoiceActivity.this,ContactsActivity.class);
-                startActivityForResult(i, Constants.REQUEST_CODE_CHOOSE_CONTACT);
+                Intent i = new Intent(CreateInvoiceActivity.this,EnterUpiActivity.class);
+                startActivityForResult(i,Constants.REQUEST_CODE_CHOOSE_CONTACT);
             }
         });
 
@@ -182,14 +182,14 @@ public class CreateInvoiceActivity extends AppCompatActivity{
         builder.setMessage("Do you have Customer contact ?");
         builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                Intent i = new Intent(CreateInvoiceActivity.this,ContactsActivity.class);
+                Intent i = new Intent(CreateInvoiceActivity.this,EnterUpiActivity.class);
                 startActivityForResult(i,Constants.REQUEST_CODE_CHOOSE_CONTACT);
             }
         });
         builder.setNegativeButton("Create Contact", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                Intent i = new Intent(CreateInvoiceActivity.this,ContactsActivity.class);
-                startActivityForResult(i,Constants.REQUEST_CODE_CREATE_CONTACT);
+                Intent i = new Intent(CreateInvoiceActivity.this,EnterUpiActivity.class);
+                startActivityForResult(i,Constants.REQUEST_CODE_CHOOSE_CONTACT);
             }
         });
         builder.show();
@@ -214,15 +214,23 @@ public class CreateInvoiceActivity extends AppCompatActivity{
     }
 
     private void showContactLayout(Contact_Model contact) {
-        TextView contact_name,contact_number,contact_email;
+        TextView contact_name,contact_number,contact_email,contact_upi;
 
         contact_name = contactLayout.findViewById(R.id.contactName);
         contact_number = contactLayout.findViewById(R.id.contactNumber);
         contact_email = contactLayout.findViewById(R.id.contactEmail);
+        contact_upi = contactLayout.findViewById(R.id.contactUpi);
+
 
         contact_name.setText(contact.getContactName());
         contact_number.setText(contact.getContactNumber());
         contact_email.setText(contact.getContactEmail());
+
+        if(contact.getUpi()!= null && contact.getUpi().length()>0){
+            contact_upi.setVisibility(View.VISIBLE);
+            contact_upi.setText(contact.getUpi());
+        }
+
         contactLayout.setVisibility(View.VISIBLE);
         btnChangeCustomer.setVisibility(View.VISIBLE);
         btnAddCustomer.setVisibility(View.GONE);
