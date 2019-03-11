@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.design.widget.TextInputLayout
+        <!--<android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp">
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Item Reference" />
 
-        </android.support.design.widget.TextInputLayout>
+        </android.support.design.widget.TextInputLayout>-->
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -54,6 +54,8 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/tiLay"
+            android:layout_below="@+id/topLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp">
@@ -68,8 +70,55 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tvqtt"
+        android:layout_below="@+id/topLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text="Quantity : "/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_below="@+id/topLayout"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:entries="@array/array_qty"
+        android:layout_toRightOf="@+id/tvqtt"
+        android:layout_width="100dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_below="@+id/tvqtt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text=" Total  : "/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_toRightOf="@+id/total"
+        android:layout_below="@+id/tvqtt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:hint="Total Amount"/>
+
     <Button
-        android:id="@+id/btnSaveAndContinue"
+        android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"

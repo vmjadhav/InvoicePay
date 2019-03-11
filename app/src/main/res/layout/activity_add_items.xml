@@ -8,6 +8,24 @@
     tools:context=".ui.AddItemsActivity">
 
     <Button
+        android:id="@+id/btnaddLineItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Tap to Add item"
+        android:layout_margin="20dp"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/lineItemsListView"
+        android:layout_below="@+id/btnaddLineItem"
+        android:layout_above="@+id/btnSaveAndContinue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
         android:id="@+id/btnSaveAndContinue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

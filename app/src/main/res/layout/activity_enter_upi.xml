@@ -111,6 +111,7 @@
                     android:id="@+id/upi_editbox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
                     android:hint="Enter Upi" />
 
             </android.support.design.widget.TextInputLayout>
