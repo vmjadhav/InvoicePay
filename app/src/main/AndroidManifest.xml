@@ -15,7 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.EnterUpiActivity"></activity>
+        <activity android:name=".ui.InvoiceReviewActivity"
+            android:label="@string/title_activity_review_invoice" />
+        <activity android:name=".ui.EnterUpiActivity"
+            android:label="@string/title_activity_enter_upi" />
         <activity
             android:name=".ui.LineItemActivity"
             android:label="@string/title_activity_line_items" />
@@ -24,7 +27,7 @@
         <activity android:name=".ui.CustomizeInvoiceBillingAddress" />
         <activity
             android:name=".ui.AddItemsActivity"
-            android:label="@string/title_activity_add_line_items" />
+            android:label="@string/title_activity_add_items" />
         <activity
             android:name=".ui.ContactsActivity"
             android:label="@string/title_activity_contact" />

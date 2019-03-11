@@ -14,8 +14,11 @@
     <string name="title_activity_payment_success">Payment Success</string>
     <string name="title_activity_transaction">Transaction Screen</string>
     <string name="title_activity_Invoice_options">Invoice Options Screen</string>
-    <string name="title_activity_contact">Create Invoice</string>
+    <string name="title_activity_contact">Select Contact</string>
     <string name="title_activity_add_line_items">Selected Items</string>
+    <string name="title_activity_add_items">Add Items</string>
+    <string name="title_activity_review_invoice">Review Invoice</string>
+    <string name="title_activity_enter_upi">Enter Upi</string>
     <string name="title_activity_line_items">Create Line item</string>
     <string name="title_activity_create_invoice">Create Invoice</string>
     <string name="payment_successful">Payment Success</string>
@@ -48,6 +51,7 @@
     <string name="title_invoice_start">Here you can customize, create and manage your invoice with ease.</string>
 
     <string-array name="array_qty">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
