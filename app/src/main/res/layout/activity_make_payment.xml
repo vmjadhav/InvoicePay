@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.MakePaymentActivity">
 
 
@@ -13,30 +12,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
         android:text="Pay to"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="30sp" />
 
 
     <TextView
         android:id="@+id/merchantName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/payTo"
         android:layout_gravity="center"
         android:layout_margin="10dp"
         android:text="@string/merchant_name"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="40sp"
         android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/amountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/merchantName"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="Amount"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 
     <EditText
         android:id="@+id/amount"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/amountTv"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="10dp"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
         android:text="INR 100"
         android:textColor="@color/black" />
 
@@ -45,7 +63,9 @@
         android:id="@+id/radioGroup"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_below="@+id/amount"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
         android:orientation="vertical">
 
         <RadioButton
@@ -59,7 +79,14 @@
             android:id="@+id/payByInternetBanking"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Internet Banking"
+            android:text="Bank Transfer"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/payByR"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="QR code"
             android:textSize="18sp" />
 
     </RadioGroup>
@@ -68,18 +95,20 @@
         android:id="@+id/tvChooseBankAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
         android:layout_gravity="left"
-        android:layout_margin="20dp"
-        android:textStyle="bold"
-        android:visibility="gone"
+        android:layout_margin="18dp"
         android:text="From Which Account You want to Pay"
         android:textColor="@color/black"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <Spinner
         android:id="@+id/spChooseBankAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvChooseBankAccount"
         android:layout_marginLeft="10dp"
         android:visibility="gone" />
 
@@ -88,9 +117,10 @@
         android:id="@+id/payBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="center"
         android:layout_margin="20dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/button"
         android:enabled="false"
         android:onClick="onSubmit"
         android:text="Pay"
@@ -98,4 +128,4 @@
         android:textSize="18sp" />
 
 
-</LinearLayout>
+</RelativeLayout>

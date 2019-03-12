@@ -40,10 +40,10 @@ public class MakePaymentActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
                 payBtn.setEnabled(true);
-                if(null != rb && rb.getText().equals("Internet Banking")) {
+                if(null != rb && rb.getText().equals("Bank Transfer")) {
                     tvChooseBankAccount.setVisibility(View.VISIBLE);
                     spinnerChooseAccount.setVisibility(View.VISIBLE);
-                } else if (null != rb && rb.getText().equals("Pay by UPI")) {
+                } else if (null != rb && (rb.getText().equals("Pay by UPI") || rb.getText().equals("QR code"))) {
                     spinnerChooseAccount.setVisibility(View.GONE);
                     tvChooseBankAccount.setVisibility(View.GONE);
                 }
@@ -55,7 +55,7 @@ public class MakePaymentActivity extends AppCompatActivity {
         RadioButton rb = (RadioButton) radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());
         if (null != rb && rb.getText().equals("Pay by UPI")) {
            startActivity(new Intent(MakePaymentActivity.this, EnterUPIPinActivity.class));
-        } else if(null != rb && rb.getText().equals("Internet Banking")) {
+        } else if(null != rb && rb.getText().equals("Bank Transfer") || rb.getText().equals("QR code")) {
             startActivity(new Intent(MakePaymentActivity.this, PaymentSuccessActivity.class));
         }
     }
