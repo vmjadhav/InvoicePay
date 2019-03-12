@@ -14,6 +14,7 @@ public class InvoiceOptionsActivity extends AppCompatActivity {
 
     private Button mCustomizeButton = null;
     private Button mCreateInvoiceButton = null;
+    private Button mManageButton = null;
 
     private MerchantCustomizedDetails merchantCustomizedDetails;
 
@@ -58,11 +59,20 @@ public class InvoiceOptionsActivity extends AppCompatActivity {
                 }
             }
         });
+
+        mManageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iManage = new Intent(getApplicationContext(), ManageInvoiceActivity.class);
+                startActivity(iManage);
+            }
+        });
     }
 
     private void initComponents() {
         mCreateInvoiceButton = findViewById(R.id.createInvoice);
         mCustomizeButton = findViewById(R.id.customizeInvoice);
+        mManageButton = findViewById(R.id.manageInvoice);
         merchantCustomizedDetails = MerchantCustomizedDetails.getInstance();
     }
 }

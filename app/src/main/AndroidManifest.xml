@@ -15,9 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.InvoiceReviewActivity"
+        <activity android:name=".ui.ManageInvoiceActivity"></activity>
+        <activity
+            android:name=".ui.InvoiceReviewActivity"
             android:label="@string/title_activity_review_invoice" />
-        <activity android:name=".ui.EnterUpiActivity"
+        <activity
+            android:name=".ui.EnterUpiActivity"
             android:label="@string/title_activity_enter_upi" />
         <activity
             android:name=".ui.LineItemActivity"

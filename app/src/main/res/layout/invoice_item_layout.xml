@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:text="Name"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txt_invoice_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Invoice Number"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txt_reference"
+        android:layout_width="match_parent"
+        android:text="Reference"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txt_expiry_date"
+        android:layout_width="match_parent"
+        android:text="ExpiryDate"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
