@@ -73,4 +73,11 @@ public class InvoiceDetails {
         this.contact = contact;
     }
 
+    public ArrayList<LineItems> getLineItemsArrayList() {
+        return lineItemsArrayList;
+    }
+
+    public void setLineItemsArrayList(ArrayList<LineItems> lineItemsArrayList) {
+        this.lineItemsArrayList = lineItemsArrayList;
+    }
 }

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context="ui.AddItemsActivity">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/itemReference_editbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Reference" />
+
+        </android.support.design.widget.TextInputLayout>-->
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/itemName_editbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Name" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/itemDesc_editbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Description" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tiLay"
+            android:layout_below="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/itemRate_editbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Rate" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvqtt"
+        android:layout_below="@+id/topLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text="Quantity : "/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_below="@+id/topLayout"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:entries="@array/array_qty"
+        android:layout_toRightOf="@+id/tvqtt"
+        android:layout_width="100dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_below="@+id/tvqtt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text=" Total  : "/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_toRightOf="@+id/total"
+        android:layout_below="@+id/tvqtt"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:hint="Total Amount"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="Add Item to Line items list"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

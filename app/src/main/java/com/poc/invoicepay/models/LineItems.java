@@ -1,6 +1,8 @@
 package com.poc.invoicepay.models;
 
-public class LineItems {
+import java.io.Serializable;
+
+public class LineItems implements Serializable {
     private String itemName,ItemDetails;
     private double itemRate,itemTotal;
     private int itemQty;
