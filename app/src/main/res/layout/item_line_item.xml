@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
+    android:layout_height="120dp"
+    android:padding="15dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:orientation="vertical"
@@ -14,7 +15,7 @@
         android:id="@+id/itemName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="3dp"
         android:text="Item Name"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
@@ -25,20 +26,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/itemName"
-        android:padding="5dp"
+        android:padding="3dp"
         android:text="Item Desc"
         android:textSize="15sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="3dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="3dp"
-            android:padding="5dp"
             android:text="Rate : "
             android:textColor="@color/colorPrimary"
             android:textSize="15sp" />
@@ -49,7 +50,6 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:lineSpacingExtra="3dp"
-            android:padding="5dp"
             android:text="Item rate"
             android:textSize="15sp" />
 
@@ -57,7 +57,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="3dp"
-            android:padding="5dp"
             android:text="Qty : "
             android:textColor="@color/colorPrimary"
             android:textSize="15sp" />
@@ -68,14 +67,12 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:lineSpacingExtra="3dp"
-            android:padding="5dp"
             android:text="Item QTY"
             android:textSize="15sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
             android:text="Item Total :"
             android:textColor="@color/colorPrimary"
             android:textSize="15sp" />
@@ -84,7 +81,6 @@
             android:id="@+id/item_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
             android:text=" Total"
             android:textSize="15sp" />
 

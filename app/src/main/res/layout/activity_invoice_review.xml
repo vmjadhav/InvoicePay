@@ -1,9 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
     tools:context=".ui.InvoiceReviewActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/contact_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/grey">
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contactImage"
+            android:fontFamily="sans-serif-light"
+            android:gravity="left"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:text="Hiren Patel"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/contactName"
+            android:layout_alignParentRight="true"
+            android:fontFamily="sans-serif-light"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:text="9876543210"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/contactEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactNumber"
+            android:fontFamily="sans-serif-light"
+            android:gravity="left"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:text="Hiren@gmail.com"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvinvoiceCreatedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactEmail"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:text="Invoice Date :"
+            android:textSize="18dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/invoiceCreatedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactEmail"
+            android:layout_toRightOf="@id/tvinvoiceCreatedDate"
+            android:lineSpacingExtra="3dp"
+            android:padding="5dp"
+            android:text="Invoice Date "
+            android:textSize="18dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_below="@id/contact_layout"
+        android:id="@+id/itemsListView"
+        android:layout_margin="10dp"
+        android:layout_above="@+id/totalAmountLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/totalAmountLayout"
+        android:layout_above="@+id/btnSendInvoice"
+        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount : "
+            android:textSize="18dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/invoiceTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total amount "
+            android:textSize="18dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSendInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:text="Send Invoice"
+        android:textColor="@color/white" />
+</RelativeLayout>
