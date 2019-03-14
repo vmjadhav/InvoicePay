@@ -3,16 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context=".ui.MainActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:text="Hello {user name}, "
-        android:textColor="@color/design_default_color_primary"
-        android:gravity="left"
-        android:textSize="32dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:src="@drawable/contact_icon"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello, Nitesh Kumar"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Balance : 50,000 INR"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,39 +58,28 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/design_default_color_primary"
-            android:text="Balance :"
-            android:textSize="32dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$ 50,000"
-            android:textColor="@color/design_default_color_primary"
-            android:textSize="32dp" />
-
     </LinearLayout>
 
 
     <LinearLayout
         android:id="@+id/viewTransaction"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_above="@+id/buttosLayout"
         android:layout_marginBottom="0dp"
         android:gravity="right"
-        android:background="#654321"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
             android:text="Tap to view Transactions"
-            android:textSize="32dp"
-            android:textColor="#FFFFFF"/>
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="16dp" />
 
     </LinearLayout>
 
@@ -76,12 +101,21 @@
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:text="Fund Transfer"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorPrimary"
                 android:layout_weight="1"
-                />
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp" />
+
             <Button android:id="@+id/button2"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:text="Bill Pay"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorPrimary"
                 android:layout_weight="1"
                 />
 
@@ -89,6 +123,8 @@
                 android:id="@+id/button3"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
+                android:background="@color/white"
+                android:textColor="@color/colorPrimary"
                 android:layout_weight="1"
                 android:text="Recharge"
                 />
@@ -104,6 +140,11 @@
             <Button android:id="@+id/button4"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="10dp"
                 android:text="Accounts"
                 android:layout_weight="1"
                 />
@@ -111,6 +152,10 @@
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:text="Invoice"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorPrimary"
                 android:layout_weight="1"
                 />
 
@@ -118,6 +163,8 @@
                 android:id="@+id/button6"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
+                android:background="@color/white"
+                android:textColor="@color/colorPrimary"
                 android:layout_weight="1"
                 android:text="Pay Later"
                 />
@@ -132,12 +179,20 @@
             <Button android:id="@+id/button7"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorPrimary"
                 android:text="Invest  Insure"
                 android:layout_weight="1"
                 />
             <Button android:id="@+id/button8"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorPrimary"
                 android:text="BHIM UPI"
                 android:layout_weight="1"
                 />
@@ -145,6 +200,8 @@
             <Button
                 android:id="@+id/button9"
                 android:layout_width="0dp"
+                android:background="@color/white"
+                android:textColor="@color/colorPrimary"
                 android:layout_height="150dp"
                 android:layout_weight="1"
                 android:text="Services"

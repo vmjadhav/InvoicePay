@@ -206,10 +206,9 @@ public class CreateInvoiceActivity extends AppCompatActivity{
             }else{
                 hideContactLayout();
             }
-
-
+            btnSaveAndContinue.setEnabled(true);
         }else if(requestCode == Constants.REQUEST_CODE_CREATE_CONTACT && resultCode == RESULT_OK){
-            Toast.makeText(CreateInvoiceActivity.this,"Succes",Toast.LENGTH_SHORT).show();
+            Toast.makeText(CreateInvoiceActivity.this,"Success",Toast.LENGTH_SHORT).show();
         }
     }
 

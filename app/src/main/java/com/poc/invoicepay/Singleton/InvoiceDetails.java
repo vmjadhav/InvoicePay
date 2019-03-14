@@ -8,21 +8,23 @@ import java.util.ArrayList;
 public class InvoiceDetails {
     private static InvoiceDetails invoiceDetails = null;
 
-    private String invoiceReference = null;
-    private String invoiceNumber = null;
-    private String invoiceCreateDate = null;
-    private String invoiceExpiryDate = null;
-    private Contact_Model contact = null;
-    private ArrayList<LineItems> lineItemsArrayList = null;
+    private String invoiceReference;
+    private String invoiceNumber;
+    private String invoiceCreateDate;
+    private String invoiceExpiryDate;
+    private Contact_Model contact;
+    private ArrayList<Contact_Model> contactList;
+    private ArrayList<LineItems> lineItemsArrayList;
 
     private InvoiceDetails()
     {
-        invoiceReference = new String();
-        invoiceNumber = new String();
-        invoiceCreateDate = new String();
-        invoiceExpiryDate = new String();
+        invoiceReference = "";
+        invoiceNumber = "";
+        invoiceCreateDate = "";
+        invoiceExpiryDate = "";
         contact = new Contact_Model();
-        lineItemsArrayList = new ArrayList<LineItems>();
+        contactList = new ArrayList<>();
+        lineItemsArrayList = new ArrayList<>();
     }
 
     public static InvoiceDetails getInstance()
@@ -79,5 +81,13 @@ public class InvoiceDetails {
 
     public void setLineItemsArrayList(ArrayList<LineItems> lineItemsArrayList) {
         this.lineItemsArrayList = lineItemsArrayList;
+    }
+
+    public ArrayList<Contact_Model> getContactList() {
+        return contactList;
+    }
+
+    public void setContactList(ArrayList<Contact_Model> contactList) {
+        this.contactList = contactList;
     }
 }

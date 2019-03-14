@@ -33,7 +33,6 @@ public class SendInvoiceActivity extends AppCompatActivity {
     private void initComponents() {
         btnSendInvoice = findViewById(R.id.btnSendInvoice);
         tvInvoiceName = findViewById(R.id.invoiceName);
-
     }
 
     private void configComponents() {

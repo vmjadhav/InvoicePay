@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.poc.invoicepay.R;
+import com.poc.invoicepay.Singleton.InvoiceDetails;
 import com.poc.invoicepay.adapters.Contact_Adapter;
 import com.poc.invoicepay.models.Contact_Model;
 
@@ -23,16 +24,24 @@ public class ContactsActivity extends AppCompatActivity {
     public ArrayList<Contact_Model> contactListMain = new ArrayList<Contact_Model>();
     ListView contact_listview;
     private static Contact_Adapter adapter;
+    private InvoiceDetails invoiceDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
-
         initView();
-        new readContactAsyncTask(ContactsActivity.this).execute();
+        getContacts();
         configViews();
 
+    }
+
+    private void getContacts() {
+        if(invoiceDetails.getContactList().isEmpty()){
+            new readContactAsyncTask(ContactsActivity.this).execute();
+        } else {
+            initAdapter(invoiceDetails.getContactList());
+        }
     }
 
     private void configViews() {
@@ -51,6 +60,8 @@ public class ContactsActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        invoiceDetails = InvoiceDetails.getInstance();
+
         contact_listview = findViewById(R.id.contactsListView);
     }
 
@@ -90,7 +101,7 @@ public class ContactsActivity extends AppCompatActivity {
                             // Toast.makeText(SingleChatActivity.this, "Name: " + name + ", Phone No: " + phoneNo, Toast.LENGTH_SHORT).show();
                             contact_model.setContactName(name);
                             contact_model.setContactNumber(phoneNo);
-                            contact_model.setContactEmail(email + "@gmail.com");
+                            contact_model.setContactEmail(email.replace(" ", "") + "@gmail.com");
                             contactListMain.add(contact_model);
                         }
                         pCur.close();
@@ -106,9 +117,14 @@ public class ContactsActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             progressDialog.dismiss();
-            adapter = new Contact_Adapter(ContactsActivity.this, contactListMain);
-            contact_listview.setAdapter(adapter);
+            invoiceDetails.setContactList(contactListMain);
+            initAdapter(contactListMain);
         }
+    }
+
+    private void initAdapter(ArrayList<Contact_Model> contactListMain) {
+        adapter = new Contact_Adapter(ContactsActivity.this, contactListMain);
+        contact_listview.setAdapter(adapter);
     }
 
 }

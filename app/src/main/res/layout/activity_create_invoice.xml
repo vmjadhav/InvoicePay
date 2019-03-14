@@ -23,6 +23,8 @@
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/invoiceReference_editbox"
                 android:layout_width="match_parent"
+                android:inputType="text"
+                android:maxLength="15"
                 android:layout_height="wrap_content"
                 android:hint="Invoice Reference" />
 
@@ -37,6 +39,9 @@
                 android:id="@+id/invoiceNo_editbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:maxLength="10"
                 android:hint="Invoice Number" />
 
         </android.support.design.widget.TextInputLayout>
@@ -74,6 +79,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <Button
@@ -181,7 +187,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimary"
+        android:enabled="false"
+        android:background="@drawable/button"
         android:gravity="center"
         android:text="Save Details and Add Items"
         android:textColor="@color/white" />

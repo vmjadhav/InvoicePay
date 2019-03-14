@@ -6,6 +6,8 @@ import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -58,7 +60,6 @@ public class EnterUpiActivity extends AppCompatActivity {
                 RadioButton rb = (RadioButton) group.findViewById(checkedId);
                 if (null != rb && checkedId == R.id.upiIdRB ) {
                     enterUpiLayout.setVisibility(View.VISIBLE);
-                    btnSaveandContinue.setEnabled(true);
                 }else if (null != rb && checkedId == R.id.withoutRb ) {
                     enterUpiLayout.setVisibility(View.GONE);
                     btnSaveandContinue.setEnabled(true);
@@ -80,6 +81,25 @@ public class EnterUpiActivity extends AppCompatActivity {
                     intent.putExtras(data);
                     setResult(RESULT_OK, intent);
                     finish();
+                }
+            }
+        });
+
+        upiEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length()>0){
+                    btnSaveandContinue.setEnabled(true);
                 }
             }
         });

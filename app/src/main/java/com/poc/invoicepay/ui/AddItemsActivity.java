@@ -87,6 +87,7 @@ public class AddItemsActivity extends AppCompatActivity {
             lineItemAdapter = null;
             lineItemAdapter = new LineItemAdapter(AddItemsActivity.this,lineItemsList);
             lineItemListView.setAdapter(lineItemAdapter);
+            btnReviewInvoice.setEnabled(true);
         }
     }
 }
