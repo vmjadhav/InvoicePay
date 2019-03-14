@@ -1,6 +1,8 @@
 package com.poc.invoicepay.ui;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -22,7 +25,7 @@ public class EnterUpiActivity extends AppCompatActivity {
 
     Contact_Model contact = new Contact_Model();
     TextInputEditText upiEditText;
-    TextView name,number,email;
+    TextView name,number,email,tvVerified;
     RadioGroup radioGroup;
     RadioButton rbEnterUpi,rbWithout;
     TextInputLayout enterUpiLayout;
@@ -51,6 +54,7 @@ public class EnterUpiActivity extends AppCompatActivity {
         upiEditText = findViewById(R.id.upi_editbox);
         enterUpiLayout = findViewById(R.id.enterUpiLayout);
         btnSaveandContinue = findViewById(R.id.btnSaveAndContinue);
+        tvVerified = findViewById(R.id.tvVerified);
     }
 
     private void configViews() {
@@ -98,11 +102,25 @@ public class EnterUpiActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(s.length()>0){
+                if(s.toString().contains("@icici") || s.toString().contains("@okicici")){
+                   tvVerified.setVisibility(View.VISIBLE);
                     btnSaveandContinue.setEnabled(true);
+                    hideKeyboard();
+                }else{
+                    tvVerified.setVisibility(View.GONE);
+                    btnSaveandContinue.setEnabled(false);
+                    enterUpiLayout.setPasswordVisibilityToggleEnabled(false);
                 }
             }
         });
+    }
+
+    private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        View view = EnterUpiActivity.this.getCurrentFocus();
+        if(view != null){
+            imm.hideSoftInputFromWindow(view.getWindowToken(),0);
+        }
     }
 
     @Override
