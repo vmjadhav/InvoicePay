@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.poc.invoicepay.R;
 
 public class CheckPasscodeActivity extends AppCompatActivity {
+
     EditText loginPINEdt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

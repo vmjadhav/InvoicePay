@@ -31,8 +31,18 @@ public class InvoiceOptionsActivity extends AppCompatActivity {
         mCreateInvoiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),CreateInvoiceActivity.class);
-                startActivity(i);
+
+                Intent iInvoice;
+                if(merchantCustomizedDetails.isFirstTime()){
+                    merchantCustomizedDetails.setFirstTime(false);
+
+                    iInvoice = new Intent(InvoiceOptionsActivity.this,
+                            CustomizeInvoiceIntro.class);
+
+                } else {
+                    iInvoice = new Intent(getApplicationContext(),CreateInvoiceActivity.class);
+                }
+                startActivity(iInvoice);
             }
         });
 
@@ -47,7 +57,7 @@ public class InvoiceOptionsActivity extends AppCompatActivity {
                     merchantCustomizedDetails.setFirstTime(false);
 
                     iCustomize = new Intent(InvoiceOptionsActivity.this,
-                            CustomizeInvoiceVerifyDetails.class);
+                            CustomizeInvoiceIntro.class);
 
                     startActivity(iCustomize);
 

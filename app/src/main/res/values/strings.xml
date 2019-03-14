@@ -66,5 +66,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_GST">GSTIN</string>
+    <string name="merchant_gstNo">123456789012345</string>
+    <string name="customize_footer">Before creating invoice you will need to first customize it according to your requirement. \nPress continue to proceed.</string>
 
 </resources>
