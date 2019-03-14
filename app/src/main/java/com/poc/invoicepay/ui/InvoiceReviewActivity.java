@@ -1,5 +1,6 @@
 package com.poc.invoicepay.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,17 +20,19 @@ public class InvoiceReviewActivity extends AppCompatActivity {
     Double invoiceTotal=0d;
     boolean fromManageInvoice = false;
     Button btnSendInvoice;
+    InvoiceDetails invoiceDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        InvoiceDetails invoiceDetails = InvoiceDetails.getInstance();
+        invoiceDetails = InvoiceDetails.getInstance();
         setContentView(R.layout.activity_invoice_review);
 
         fromManageInvoice = getIntent().getBooleanExtra("fromManageInvoice",false);
 
         initComponents();
-        setDataInInvoice(invoiceDetails);
+        setDataInInvoice();
+        configViews();
     }
 
     private void initComponents() {
@@ -45,7 +48,7 @@ public class InvoiceReviewActivity extends AppCompatActivity {
         }
     }
 
-    private void setDataInInvoice(InvoiceDetails invoiceDetails) {
+    private void setDataInInvoice() {
         custName.setText(invoiceDetails.getContact().getContactName());
         custNumber.setText(invoiceDetails.getContact().getContactNumber());
         custEmail.setText(invoiceDetails.getContact().getContactEmail());
@@ -59,5 +62,15 @@ public class InvoiceReviewActivity extends AppCompatActivity {
         }
 
         custInvoiceTotal.setText(invoiceTotal.toString());
+    }
+
+    private void configViews() {
+        btnSendInvoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InvoiceReviewActivity.this,SendInvoiceActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

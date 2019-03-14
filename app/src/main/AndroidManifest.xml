@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.ManageInvoiceActivity"></activity>
+        <activity android:name=".ui.SendInvoiceActivity"></activity>
+        <activity android:name=".ui.ManageInvoiceActivity" />
         <activity
             android:name=".ui.InvoiceReviewActivity"
             android:label="@string/title_activity_review_invoice" />

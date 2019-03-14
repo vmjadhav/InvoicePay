@@ -128,6 +128,6 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:layout_alignParentBottom="true"
-        android:text="Send Invoice"
+        android:text="Confirm Invoice Details"
         android:textColor="@color/white" />
 </RelativeLayout>
