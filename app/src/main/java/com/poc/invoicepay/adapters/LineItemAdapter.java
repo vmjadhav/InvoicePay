@@ -61,10 +61,10 @@ public class LineItemAdapter extends BaseAdapter {
         }
 
         if (item.getItemName() != null) {
-            holder.itemName.setText(item.getItemName());
+            holder.itemName.setText("Item Name: " + item.getItemName());
         }
         if (item.getItemDetails() != null) {
-            holder.itemDetails.setText(item.getItemDetails());
+            holder.itemDetails.setText("Item Desc: " + item.getItemDetails());
         }
         if (item.getItemRate() > 0) {
             holder.itemRate.setText(String.valueOf(item.getItemRate()));
