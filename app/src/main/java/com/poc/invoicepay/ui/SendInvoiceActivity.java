@@ -14,7 +14,8 @@ public class SendInvoiceActivity extends AppCompatActivity {
 
     Button btnSendInvoice;
     InvoiceDetails invoiceDetails;
-    TextView tvInvoiceName;
+    TextView tvInvoiceName,tvInvoiceAmount,tvInvoiceNumber;
+    Double invoiceTotal = 0d;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +34,19 @@ public class SendInvoiceActivity extends AppCompatActivity {
     private void initComponents() {
         btnSendInvoice = findViewById(R.id.btnSendInvoice);
         tvInvoiceName = findViewById(R.id.invoiceName);
+        tvInvoiceAmount = findViewById(R.id.invoiceAmount);
+        tvInvoiceNumber = findViewById(R.id.invoiceNumber);
     }
 
     private void configComponents() {
-        tvInvoiceName.setText(invoiceDetails.getContact().getContactName());
+        tvInvoiceName.setText("to send " + invoiceDetails.getContact().getContactName());
+        tvInvoiceNumber.setText(invoiceDetails.getContact().getContactNumber());
+        for(int i =0 ; i < invoiceDetails.getLineItemsArrayList().size();i++){
+            invoiceTotal += invoiceDetails.getLineItemsArrayList().get(i).getItemTotal();
+        }
+        tvInvoiceAmount.setText(String.valueOf(invoiceTotal) + " INR");
+
+
         btnSendInvoice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

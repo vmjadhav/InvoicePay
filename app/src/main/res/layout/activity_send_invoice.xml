@@ -4,37 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLight"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".ui.SendInvoiceActivity">
 
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/img_invoice"
+            android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/tick_icon"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvInvoiceinfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Invoice is created for"
+        android:gravity="center"
+        android:text="Invoice is created"
         android:fontFamily="sans-serif-light"
         android:lineSpacingExtra="3dp"
         android:padding="5dp"
         android:layout_centerInParent="true"
-        android:textColor="@color/grey"
+        android:textColor="@color/colorPrimary"
         android:textSize="32sp"
         />
+
+    <TextView
+        android:id="@+id/invoiceAmount"
+        android:layout_below="@+id/tvInvoiceinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1000 INR"
+        android:fontFamily="sans-serif-light"
+        android:lineSpacingExtra="3dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp"
+        />
+
     <TextView
         android:id="@+id/invoiceName"
-        android:layout_below="@+id/tvInvoiceinfo"
+        android:layout_below="@+id/invoiceAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nitesh Kumar"
         android:fontFamily="sans-serif-light"
         android:lineSpacingExtra="3dp"
+        android:gravity="center"
         android:padding="5dp"
         android:layout_centerInParent="true"
-        android:textColor="@color/grey"
-        android:textSize="32sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
         />
 
+    <TextView
+        android:id="@+id/invoiceNumber"
+        android:layout_below="@+id/invoiceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="88 66 35 82 52"
+        android:fontFamily="sans-serif-light"
+        android:lineSpacingExtra="3dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        />
     <Button
         android:id="@+id/btnSendInvoice"
         android:layout_width="match_parent"
