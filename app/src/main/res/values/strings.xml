@@ -27,8 +27,8 @@
     <string name="done">Done</string>
     <string name="todo">TODO</string>
     <string name="invoice"><u>Invoice</u></string>
-    <string name="title_verify_details">Verify details</string>
-    <string name="title_select_payment_type">Select payment</string>
+    <string name="title_verify_details">Verify Details</string>
+    <string name="title_select_payment_type">Select Payment</string>
     <string name="merchant_address">House no. 456, Wakad \nPune \nMaharashtra</string>
     <string name="title_header_verify_details">Please verify your details</string>
     <string name="label_Name">Name:</string>
@@ -69,5 +69,10 @@
     <string name="label_GST">GSTIN</string>
     <string name="merchant_gstNo">123456789012345</string>
     <string name="customize_footer">Before creating invoice you will need to first customize it according to your requirement. \nPress continue to proceed.</string>
+    <string name="title_customize_invoice">Customize Invoice</string>
+    <string name="title_billing_address">Select Billing Address</string>
+    <string name="title_invoice_success">Invoice Success</string>
+    <string name="title_manage_invoice">Manage Invoice</string>
+    <string name="title_send_invoice">Send Invoice</string>
 
 </resources>

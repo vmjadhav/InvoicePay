@@ -15,9 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.CustomizeInvoiceIntro"></activity>
-        <activity android:name=".ui.SendInvoiceActivity" />
-        <activity android:name=".ui.ManageInvoiceActivity" />
+
+        <activity android:name=".ui.CustomizeInvoiceIntro"
+            android:label="@string/title_customize_invoice"/>
+
+        <activity android:name=".ui.SendInvoiceActivity"
+            android:label="@string/title_send_invoice"/>
+
+        <activity android:name=".ui.ManageInvoiceActivity"
+            android:label="@string/title_manage_invoice"/>
         <activity
             android:name=".ui.InvoiceReviewActivity"
             android:label="@string/title_activity_review_invoice" />
@@ -27,9 +33,16 @@
         <activity
             android:name=".ui.LineItemActivity"
             android:label="@string/title_activity_line_items" />
-        <activity android:name=".ui.CustomizedInvoiceDetails" />
-        <activity android:name=".ui.CustomizeInvoiceSuccess" />
-        <activity android:name=".ui.CustomizeInvoiceBillingAddress" />
+
+        <activity android:name=".ui.CustomizedInvoiceDetails"
+            android:label="@string/title_customize_invoice"/>
+
+        <activity android:name=".ui.CustomizeInvoiceSuccess"
+            android:label="@string/title_invoice_success"/>
+
+        <activity android:name=".ui.CustomizeInvoiceBillingAddress"
+            android:label="@string/title_billing_address"/>
+
         <activity
             android:name=".ui.AddItemsActivity"
             android:label="@string/title_activity_add_items" />

@@ -14,7 +14,7 @@ import com.poc.invoicepay.adapters.LineItemAdapter;
 
 public class InvoiceReviewActivity extends AppCompatActivity {
 
-    TextView custName,custEmail,custNumber,custInvoiceTotal,invoiceDate;
+    TextView custName,custEmail,custInvoiceTotal,invoiceDate;
     ListView itemsListView;
     LineItemAdapter lineItemAdapter;
     Double invoiceTotal=0d;
@@ -39,7 +39,6 @@ public class InvoiceReviewActivity extends AppCompatActivity {
         invoiceDate = findViewById(R.id.invoiceCreatedDate);
         custName = findViewById(R.id.contactName);
         custEmail = findViewById(R.id.contactEmail);
-        custNumber = findViewById(R.id.contactNumber);
         custInvoiceTotal = findViewById(R.id.invoiceTotal);
         itemsListView = findViewById(R.id.itemsListView);
         btnSendInvoice = findViewById(R.id.btnSendInvoice);
@@ -50,7 +49,6 @@ public class InvoiceReviewActivity extends AppCompatActivity {
 
     private void setDataInInvoice() {
         custName.setText(invoiceDetails.getContact().getContactName());
-        custNumber.setText(invoiceDetails.getContact().getContactNumber());
         custEmail.setText(invoiceDetails.getContact().getContactEmail());
         invoiceDate.setText(invoiceDetails.getInvoiceCreateDate());
 

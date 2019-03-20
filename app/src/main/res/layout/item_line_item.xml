@@ -17,9 +17,7 @@
         android:layout_height="wrap_content"
         android:padding="3dp"
         android:text="Item Name"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/ItemDetails"
