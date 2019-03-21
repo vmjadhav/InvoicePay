@@ -50,6 +50,7 @@ public class FCMService extends IntentService {
 
 
         Intent viewInvoiceIntent = new Intent(this, ViewInvoiceActivity.class);
+        viewInvoiceIntent.putExtra("FROM_SCREEN","NOTIFICATION");
         PendingIntent pViewInvoiceIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), viewInvoiceIntent, 0);
 
         RemoteViews contentView = new RemoteViews(getPackageName(), R.layout.pay_request_notification);

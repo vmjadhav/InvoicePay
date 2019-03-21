@@ -20,18 +20,18 @@
         android:layout_toEndOf="@+id/request_from"
         android:layout_toRightOf="@+id/request_from"
         android:gravity="right"
-        android:text="@string/_26_jan_2019"
+        android:text="@string/request_date"
         android:textColor="@color/black" />
 
 
     <ImageView
         android:id="@+id/merchant_icon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
        android:layout_marginLeft="10dp"
         android:layout_below="@+id/request_from"
         android:scaleType="fitCenter"
-        android:src="@drawable/ola_icon" />
+        android:src="@drawable/indian_motors_icon" />
 
 
     <TextView
@@ -55,7 +55,7 @@
         android:layout_margin="10dp"
         android:layout_toRightOf="@+id/merchant_name"
         android:gravity="right"
-        android:text="500 INR"
+        android:text="650 INR"
         android:textColor="@color/black" />
 
     <TextView
@@ -113,7 +113,7 @@
         android:layout_toEndOf="@+id/valid_upto"
         android:layout_toRightOf="@+id/valid_upto"
         android:gravity="right"
-        android:text="@string/_26_jan_2019"
+        android:text="@string/valid_date"
         android:textColor="@color/black" />
 
     <Button

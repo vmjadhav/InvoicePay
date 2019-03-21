@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:textColor="@color/white"
-            android:text="Nitesh Kumar"
+            android:text="@string/merchant_name"
             android:textStyle="normal" />
 
 
@@ -52,7 +52,7 @@
             android:layout_margin="20dp"
             android:layout_alignParentRight="true"
             android:textColor="@color/white"
-            android:text="100 INR"
+            android:text="650 INR"
             android:textStyle="normal" />
 
     </RelativeLayout>

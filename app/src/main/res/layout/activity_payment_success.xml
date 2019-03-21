@@ -48,7 +48,7 @@
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:gravity="center"
-        android:text="@string/transaction_number_123412234"
+        android:text="@string/transaction_number"
         android:textStyle="bold" />
 
 

@@ -1,7 +1,9 @@
 package com.poc.invoicepay.ui;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -20,6 +22,7 @@ import com.poc.invoicepay.gateway.Server;
 
 public class EnterUPIPinActivity extends AppCompatActivity implements Server.ServerOperationCompletion{
     EditText loginPINEdt;
+    private ProgressDialog progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +64,20 @@ public class EnterUPIPinActivity extends AppCompatActivity implements Server.Ser
     }
 
     private void goToPaySuccessScreen() {
-        Intent intent = new Intent(EnterUPIPinActivity.this, PaymentSuccessActivity.class);
-        startActivity(intent);
+        progress=new ProgressDialog(EnterUPIPinActivity.this);
+        progress.setMessage("Please wait ...");
+        progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progress.show();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                progress.dismiss();
+                finish();
+                Intent intent = new Intent(EnterUPIPinActivity.this, PaymentSuccessActivity.class);
+                startActivity(intent);
+            }
+        }, 2000);
     }
 
 

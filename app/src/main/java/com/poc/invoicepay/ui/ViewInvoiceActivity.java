@@ -1,5 +1,6 @@
 package com.poc.invoicepay.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -26,7 +27,15 @@ public class ViewInvoiceActivity extends AppCompatActivity {
         webSettings.setDisplayZoomControls(false);
         ViewInvoiceWebViewClientImpl webViewClient = new ViewInvoiceWebViewClientImpl(this);
         webView.setWebViewClient(webViewClient);
-        webView.loadUrl("http://yoyobilling.tk/BillingDashboard/invoice.html");
+
+        Intent intent = getIntent();
+        String fromScreen = intent.getStringExtra("FROM_SCREEN");
+        if(fromScreen.equals("TRANSACTION")) {
+            webView.loadUrl("http://yoyobilling.tk/BillingDashboard/invoice.html");
+        } else {
+            webView.loadUrl("http://yoyobilling.tk/BillingDashboard/unpaidinvoice.html");
+        }
+
 
     }
 

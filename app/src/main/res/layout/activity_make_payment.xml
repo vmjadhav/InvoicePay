@@ -55,7 +55,7 @@
         android:layout_marginRight="10dp"
         android:imeOptions="actionDone"
         android:inputType="numberDecimal"
-        android:text="INR 100"
+        android:text="INR 650"
         android:textColor="@color/black" />
 
 

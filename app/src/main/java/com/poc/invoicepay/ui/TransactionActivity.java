@@ -34,16 +34,16 @@ public class TransactionActivity extends AppCompatActivity {
     }
 
     private void prepareTransactionData() {
-        Transaction transaction = new Transaction("08 Mar 19", "UPI/8742423442/charge/uber@iciciBank", "100.00 Dr");
+        Transaction transaction = new Transaction("22 Mar 19", "UPI/8742423442/charge/IndiaMotors@iciciBank", "650.00 Dr");
         transactionList.add(transaction);
 
-        transaction = new Transaction("08 Mar 19", "UPI/233331134/charge/ola@iciciBank", "65.00 Dr");
+        transaction = new Transaction("08 Mar 19", "UPI/233331134/charge/uber@iciciBank", "65.00 Dr");
         transactionList.add(transaction);
 
         transaction = new Transaction("07 Mar 19", "UPI/46634535/charge/bookmyshow@iciciBank", "89.00 Dr");
         transactionList.add(transaction);
 
-        transaction = new Transaction("07 Mar 19", "UPI/6464646/charge/ola@iciciBank", "200.00 Dr");
+        transaction = new Transaction("07 Mar 19", "UPI/6464646/charge/tatasky@iciciBank", "200.00 Dr");
         transactionList.add(transaction);
 
         transaction = new Transaction("07 Mar 19", "UPI/4545646/charge/ola@iciciBank", "150.00 Dr");

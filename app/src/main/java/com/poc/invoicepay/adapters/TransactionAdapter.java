@@ -34,6 +34,7 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
                 @Override
                 public void onClick(View v) {
                     Intent viewInvoiceIntent = new Intent(context, ViewInvoiceActivity.class);
+                    viewInvoiceIntent.putExtra("FROM_SCREEN","TRANSACTION");
                     context.startActivity(viewInvoiceIntent);
                 }
             });
