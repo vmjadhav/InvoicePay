@@ -1,8 +1,10 @@
 package com.poc.invoicepay.ui;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -53,9 +55,13 @@ public class SendInvoiceActivity extends AppCompatActivity {
                 if(invoiceDetails.getContact().getUpi()!=null && !invoiceDetails.getContact().getUpi().isEmpty()){
                     broadcastIntent();
                 }else{
-                    Intent intent = new Intent(Intent.ACTION_SEND);
-                    intent.putExtra("invoiceLink","http://yoyobilling.tk/BillingDashboard/nonICICIPayment.html");
-                    startActivity(Intent.createChooser(intent,"Share Invoice Link:"));
+                    Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                    emailIntent.setType("text/html");
+                    emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {invoiceDetails.getContact().getContactEmail()}); // recipients
+                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Invoice Link");
+                    emailIntent.putExtra(Intent.EXTRA_TEXT, "Hi " +invoiceDetails.getContact().getContactName() + "," + "\n\nPlease find the Invoice Link below to verify and pay."+
+                            "\n\n" + "INVOICE LINK: http://yoyobilling.tk/BillingDashboard/nonICICIPayment.html");
+                    startActivity(emailIntent);
                 }
             }
         });

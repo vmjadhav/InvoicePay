@@ -51,6 +51,8 @@
     <string name="title_payment_selection_added">Additional payment methods:</string>
     <string name="title_invoice_start">Here you can customize, create and manage your invoice with ease.</string>
 
+    <string name="invoiceLink"><![CDATA[<a href="http://yoyobilling.tk/BillingDashboard/nonICICIPayment.html">INVOICE LINK</a>]]></string>
+
     <string-array name="array_qty">
         <item>0</item>
         <item>1</item>
