@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="UPI id: nitesh@icici"
+            android:text="UPI id: indianmotors@icici"
             android:gravity="center_vertical"
             android:drawableEnd="@drawable/icn_green_tick"
             android:drawablePadding="10dp"

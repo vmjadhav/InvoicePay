@@ -30,10 +30,10 @@
     <string name="invoice"><u>Invoice</u></string>
     <string name="title_verify_details">Verify Details</string>
     <string name="title_select_payment_type">Select Payment</string>
-    <string name="merchant_address">House no. 456, Wakad \nPune \nMaharashtra</string>
+    <string name="merchant_address">Gala No. 112 Ground floor, Hello Park,\nPlot no. - A/28 Ind. Estate\nThane East - 123456</string>
     <string name="title_header_verify_details">Please verify your details</string>
     <string name="label_Name">Name:</string>
-    <string name="value_name">Nitesh Kumar</string>
+    <string name="value_name">Indian Motors</string>
     <string name="label_phone">Phone:</string>
     <string name="label_emailId">Email Id:</string>
     <string name="label_upiId">UPI Id:</string>
